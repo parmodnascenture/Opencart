@@ -2,6 +2,10 @@
 class ModelSettingModule extends Model {
 	public function addModule($code, $data) {
 		$this->db->query("INSERT INTO `" . DB_PREFIX . "module` SET `name` = '" . $this->db->escape($data['name']) . "', `code` = '" . $this->db->escape($code) . "', `setting` = '" . $this->db->escape(json_encode($data)) . "'");
+
+		$this->db->query("INSERT INTO `" . DB_PREFIX . "testimonial` SET `title` = '" . $this->db->escape($data['title']) . "',`name` = '" . $this->db->escape($data['name']) . "',`email` = '" . $this->db->escape($data['email']) . "',`rating` = '" . $this->db->escape($data['rating']) . "', `description` = '" . $this->db->escape($data['description']) . "', `status` = '" . $this->db->escape($data['status']) . "'");	
+
+		
 	}
 	
 	public function editModule($module_id, $data) {

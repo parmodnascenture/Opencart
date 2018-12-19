@@ -115,3 +115,5 @@
 2018-12-19 11:02:21 - PHP Notice:  Undefined index: description in /var/www/html/nascenture/admin/model/testimonial/testimonial.php on line 4
 2018-12-19 11:11:51 - PHP Notice:  Undefined index: description in /var/www/html/nascenture/admin/model/testimonial/testimonial.php on line 4
 2018-12-19 12:16:40 - PHP Notice:  Undefined index: description in /var/www/html/nascenture/admin/model/testimonial/testimonial.php on line 4
+2018-12-19 12:41:08 - PHP Notice:  Undefined index: description in /var/www/html/nascenture/admin/model/testimonial/testimonial.php on line 4
+2018-12-19 12:52:27 - PHP Notice:  Undefined index: description in /var/www/html/nascenture/admin/model/setting/module.php on line 6

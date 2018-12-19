@@ -8,13 +8,15 @@ class ControllerExtensionModuleTestimonial extends Controller {
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        $this->load->model('testimonial/testimonial');
+        $this->load->model('setting/module');
 
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
-            if (!isset($this->request->get['testimonial_id'])) {
-                $this->model_testimonial_testimonial->addTestimonial('testimonial', $this->request->post);
+            if (!isset($this->request->get['module_id'])) {
+//echo "<pre>"; print_r($this->request->get); die;
+
+                $this->model_setting_module->addModule('testimonial', $this->request->post);
             } else {
-                $this->model_testimonial_testimonial->editTestimonial($this->request->get['testimonial_id'], $this->request->post);
+                $this->model_setting_module->editModule($this->request->get['module_id'], $this->request->post);
             }
 
             $this->session->data['success'] = $this->language->get('text_success');
