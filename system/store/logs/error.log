@@ -117,3 +117,17 @@
 2018-12-19 12:16:40 - PHP Notice:  Undefined index: description in /var/www/html/nascenture/admin/model/testimonial/testimonial.php on line 4
 2018-12-19 12:41:08 - PHP Notice:  Undefined index: description in /var/www/html/nascenture/admin/model/testimonial/testimonial.php on line 4
 2018-12-19 12:52:27 - PHP Notice:  Undefined index: description in /var/www/html/nascenture/admin/model/setting/module.php on line 6
+2018-12-20 4:57:23 - PHP Notice:  Undefined index: module_id in /var/www/html/nascenture/admin/controller/extension/module/testimonial.php on line 18
+2018-12-20 5:04:15 - PHP Notice:  Undefined index: module_id in /var/www/html/nascenture/admin/controller/extension/module/testimonial.php on line 18
+2018-12-20 5:04:15 - PHP Notice:  Undefined index: testimonial_id in /var/www/html/nascenture/admin/model/setting/module.php on line 22
+2018-12-20 5:05:56 - PHP Notice:  Undefined index: module_id in /var/www/html/nascenture/admin/controller/extension/module/testimonial.php on line 18
+2018-12-20 5:05:56 - PHP Notice:  Undefined index: testimonial_id in /var/www/html/nascenture/admin/model/setting/module.php on line 22
+2018-12-20 5:06:31 - PHP Notice:  Undefined index: module_id in /var/www/html/nascenture/admin/controller/extension/module/testimonial.php on line 18
+2018-12-20 5:06:44 - PHP Notice:  Undefined index: module_id in /var/www/html/nascenture/admin/controller/extension/module/testimonial.php on line 18
+2018-12-20 5:27:35 - PHP Notice:  Undefined variable: module_id in /var/www/html/nascenture/admin/model/setting/module.php on line 7
+2018-12-20 5:27:35 - PHP Unknown:  Object of class stdClass could not be converted to string in /var/www/html/nascenture/admin/model/setting/module.php on line 9
+2018-12-20 5:28:23 - PHP Notice:  Undefined variable: module_id in /var/www/html/nascenture/admin/model/setting/module.php on line 7
+2018-12-20 5:45:46 - PHP Notice:  Undefined variable: address in /var/www/html/nascenture/admin/controller/extension/module/testimonial.php on line 15
+2018-12-20 5:47:37 - PHP Notice:  Undefined variable: address in /var/www/html/nascenture/admin/controller/extension/module/testimonial.php on line 15
+2018-12-20 6:17:44 - PHP Notice:  Undefined index: module_id in /var/www/html/nascenture/admin/controller/extension/module/testimonial.php on line 18
+2018-12-20 6:23:36 - PHP Notice:  Undefined index: module_id in /var/www/html/nascenture/admin/controller/extension/module/testimonial.php on line 18

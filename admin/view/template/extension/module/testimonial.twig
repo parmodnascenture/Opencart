@@ -3,8 +3,8 @@
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right">
-        <button type="submit" form="form-module" data-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa fa-save"></i></button>
-        <a href="{{ cancel }}" data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
+        <a href="{{ add }}" title="{{ button_add }}" class="btn btn-primary">Add New</a>
+      </div>
       <h1>{{ heading_title }}</h1>
       <ul class="breadcrumb">
         {% for breadcrumb in breadcrumbs %}
@@ -13,73 +13,68 @@
       </ul>
     </div>
   </div>
-  <div class="container-fluid">
-    {% if error_warning %}
+  <div class="container-fluid">{% if error_warning %}
     <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
       <button type="button" class="close" data-dismiss="alert">&times;</button>
     </div>
     {% endif %}
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title"><i class="fa fa-pencil"></i> {{ text_edit }}</h3>
-      </div>
-      <div class="panel-body">
-        <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-module" class="form-horizontal">
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-title">{{ entry_title }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="title" value="{{ title }}" placeholder="{{ entry_title }}" id="input-title" class="form-control" />
-              {% if error_title %}
-              <div class="text-danger">{{ error_title }}</div>
-              {% endif %}
+    {% if success %}
+    <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    {% endif %}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-list"></i> {{ text_list }}</h3>
+          </div>
+          <div class="panel-body">
+            <form action="{{ delete }}" method="post" enctype="multipart/form-data" id="form-testimonial">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th class="text-center">{{entry_title}}</th>
+                      <th class="text-center">{{entry_name}}</th>
+                      <th class="text-center">{{entry_email}}</th>
+                      <th class="text-center">{{entry_rating}}</th>
+                      <th class="text-center">{{entry_description}}</th>
+                      <th class="text-center">{{entry_status}}</th>
+                      <th class="text-center">{{ column_action }}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% if testimonials %}
+                  {% for testimonial in testimonials %}
+                  <tr>
+                  <td class="text-center">{{ testimonial.title }}</td>
+                    <td class="text-center">{{ testimonial.name }}</td>
+                    <td class="text-center">{{ testimonial.email }}</td>
+                    <td class="text-center">{{ testimonial.rating }}</td>
+                    <td class="text-center">{{ testimonial.description }}</td>
+                    <td class="text-center">{{ testimonial.status }}</td>
+                    <td class="text-center"><a href="{{ testimonial.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a> <button type="button" data-toggle="tooltip" title="{{ button_delete }}" class="btn btn-danger" onclick="confirm('{{ text_confirm }}') ? $('#form-testimonial').submit() : false;"><i class="fa fa-trash-o"></i></button></td>
+                  </tr>
+                  {% endfor %}
+                  {% else %}
+                  <tr>
+                    <td class="text-center" colspan="7">{{ text_no_results }}</td>
+                  </tr>
+                  {% endif %}
+                    </tbody>
+                  
+                </table>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col-sm-6 text-left">{{ pagination }}</div>
+              <div class="col-sm-6 text-right">{{ results }}</div>
             </div>
           </div>
-          
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-name">{{ entry_name }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="name" value="{{ name }}" placeholder="{{ entry_name }}" id="input-name" class="form-control" />
-              {% if error_name %}
-              <div class="text-danger">{{ error_name }}</div>
-              {% endif %}
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-email">{{ entry_email }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="email" value="{{ email }}" placeholder="{{ entry_email }}" id="input-email" class="form-control" />
-              {% if error_email %}
-              <div class="text-danger">{{ error_email }}</div>
-              {% endif %}
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-rating">{{ entry_rating }}</label>
-            <div class="col-sm-10">
-              <input type="text" name="rating" value="{{ rating }}" placeholder="{{ entry_rating }}" id="input-rating" class="form-control" />
-              {% if error_rating %}
-              <div class="text-danger">{{ error_rating }}</div>
-              {% endif %}
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-status">{{ entry_status }}</label>
-            <div class="col-sm-10">
-              <select name="status" id="input-status" class="form-control">
-                {% if status %}
-                <option value="1" selected="selected">{{ text_enabled }}</option>
-                <option value="0">{{ text_disabled }}</option>
-                {% else %}
-                <option value="1">{{ text_enabled }}</option>
-                <option value="0" selected="selected">{{ text_disabled }}</option>
-                {% endif %}
-              </select>
-            </div>
-          </div>
-
-        </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
+ </div>
 {{ footer }}

@@ -5,11 +5,11 @@ $_['heading_title']     = 'Testimonial';
 
 // Text
 
-$_['text_name'] 		=  'Module Name';
+$_['text_name'] 		=  'Name';
 $_['text_status'] 		=  'Status';
 $_['text_module']       = 'Modules';
-$_['text_edit']         = 'Add Testimonial';
-$_['button_save_stay']    = 'Save and Stay';
+$_['text_edit']         = 'Testimonials';
+$_['column_action']    = 'Action';
 $_['text_success']        = 'Success: You have modified module slideshow!';
 $_['text_content_top']    = 'Content Top';
 $_['text_content_bottom'] = 'Content Bottom';
@@ -31,25 +31,20 @@ $_['text_max_items_page']   = 'Max Item In Each Page';
 
 $_['all_page']   			= 'All Page';
 // 
-$_['entry_name']        	= 'Name:';
-$_['entry_rating']        	= 'Rating:';
-$_['entry_email']        	= 'Email:';
-$_['entry_title']        	= 'Title:';
-$_['entry_description']        	= 'Description:';
+$_['entry_name']        	= 'Name';
+$_['entry_rating']        	= 'Rating';
+$_['entry_email']        	= 'Email';
+$_['entry_title']        	= 'Title';
+$_['entry_status'] 		    =  'Status';
+$_['entry_description']   	= 'Description';
 
-$_['entry_banner']        	= 'Testimonial:';
-$_['entry_dimension']     	= 'Dimension (W x H) and Resize Type:';
-$_['entry_height']        	= 'Testimonial Height:';
-$_['entry_width']        	= 'Testimonial Width:';
-$_['entry_title']        	= 'Title:';
-$_['entry_description']     = 'Description:';
 
 $_['text_browse']        	= 'Browse';
 $_['text_clear']        	= 'Clear';
 
 $_['entry_layout']        	= 'Layout:';
 $_['entry_position']      	= 'Position:';
-$_['entry_status']        	= 'Status:';
+
 $_['entry_sort_order']    	= 'Sort Order:';
 $_['entry_image_navigator'] = 'Show Thumbnail Navigator' ;
 $_['entry_navigator_width'] = 'Thumbnail Width';

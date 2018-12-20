@@ -1,5 +1,6 @@
 <?php
 class ModelTestimonialTestimonial extends Model {
+	
 	public function addTestimonial($code, $data) {
 		$this->db->query("INSERT INTO `" . DB_PREFIX . "testimonial` SET `title` = '" . $this->db->escape($data['title']) . "',`name` = '" . $this->db->escape($data['name']) . "',`email` = '" . $this->db->escape($data['email']) . "',`rating` = '" . $this->db->escape($data['rating']) . "', `description` = '" . $this->db->escape($data['description']) . "', `status` = '" . $this->db->escape($data['status']) . "'");
 	}
